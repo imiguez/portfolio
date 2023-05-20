@@ -1,16 +1,14 @@
 import React, { FC } from "react"
-import { Link } from "react-router-dom"
+import "styles/nav.css";
 
 
 const NavBar: FC = () => {
 
-
     return (
-        <nav className="bg-principal" style={{height: "10vh"}}>
-
-            <Link to={"/"} className="color-principal">Home</Link>
-            <Link to={"/about"}>About Me</Link>
-            <Link to={"/testing"}>Testing</Link>
+        <nav>
+            <button className="nav-btn">Home</button>
+            <button className="nav-btn">About Me</button>
+            <button className="nav-btn">Testing</button>
         </nav>
     )
 }

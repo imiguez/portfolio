@@ -1,14 +1,12 @@
-import { RouterProvider } from "react-router-dom";
-import MainRouter from "../MainRouter";
 import React, { FC } from "react";
+import Home from "@/pages/Home";
 
 const App: FC = () => {
-
   return (
     <>
-        <RouterProvider router={MainRouter}/>
+      <Home />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
