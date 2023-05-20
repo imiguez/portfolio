@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "esModuleInterop": true,
+        "jsx": "react",
+        "baseUrl": ".",
+        "paths": {
+          "@/*": ["./src/*", "./dist/*", ""],
+          "pages/*": ["src/pages/*"],
+          "components/*": ["src/components/*"],
+        //   "types/*": ["src/@types/*"],
+          "public/*": ["public/*"],
+          "styles/*": ["src/styles/*"]
+        }
+    },
+    "include": ["next-env.d.ts", "twin.d.ts", "**/*.ts", "**/*.tsx", "**/*.css"],
+    "exclude": ["node_modules"],
+  }

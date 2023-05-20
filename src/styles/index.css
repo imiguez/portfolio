@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+
+.display-right {
+  display: flex;
+  justify-content: right;
+}
+
+.bg-principal {
+  background-color: #2f3e46;
+}
+
+.color-principal {
+  color: #ffffff;
+}

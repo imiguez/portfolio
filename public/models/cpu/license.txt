@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cpu
+* source:	https://sketchfab.com/3d-models/cpu-6f42bac356454309b9d446c40db60e80
+* author:	gabymrtnz (https://sketchfab.com/gabymrtnz)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cpu" (https://sketchfab.com/3d-models/cpu-6f42bac356454309b9d446c40db60e80) by gabymrtnz (https://sketchfab.com/gabymrtnz) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
