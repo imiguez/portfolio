@@ -1,41 +1,47 @@
-import { Environment, OrbitControls } from "@react-three/drei";
-import React from "react";
+import React, { useEffect } from "react";
 import { FC } from "react";
-import { Canvas } from "react-three-fiber";
-import * as THREE from "three";
-import Cpu from "../components/ThreeObjects/desktop/Cpu";
-import Keyboard from "../components/ThreeObjects/desktop/Keyboard";
-import Lamp from "../components/ThreeObjects/Lamp";
-import Desk from "../components/ThreeObjects/desktop/Desk";
-import Monitor from "../components/ThreeObjects/desktop/Monitor";
-import Room from "../components/ThreeObjects/room/Room";
-import NavBar from "@/components/NavBar";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Home: FC = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline({
+      defaults: {
+        ease: "power4.out",
+        delay: .2,
+        stagger: {
+          amount: 0.4,
+        },
+      },
+      scrollTrigger: {
+        trigger: ".welcome-container",
+        start: "top 26%",
+        end: "top 24%",
+        markers: false,
+        toggleActions: "restart reverse restart reverse"
+      }
+    });
+
+    tl.fromTo(".reveal-effect", {y: 200,}, {y: 0,});
+  });
+
   return (
     <>
-      <NavBar />
-      <Canvas
-        style={{ width: "100vw", height: "100vh" }}
-        frameloop="demand"
-        gl={{
-          toneMapping: THREE.ReinhardToneMapping,
-          toneMappingExposure: 2.3,
-        }}
-        camera={{ position: [0, 10, 200] }}
-        shadows
-      >
-        <color args={[0, 0, 0]} attach={"background"} />
-        <Environment preset={"night"} />
-        <hemisphereLight args={["#ffb703", "#d5bdaf"]} intensity={0.4} />
-        <Lamp />
-        <Monitor />
-        <Keyboard />
-        <Cpu />
-        <Desk />
-        <Room />
-        <OrbitControls />
-      </Canvas>
+      <div className="section homepage">
+        <section className="welcome-container">
+          <div className="reveal-effect-container">
+            <h1 className="title welcome-title reveal-effect">Welcome to</h1>
+          </div>
+          <div className="reveal-effect-container">
+            <h1 className="title welcome-title reveal-effect">my portfolio!</h1>
+          </div>
+          <div className="subtitle-container reveal-effect-container">
+            <img className="line-img reveal-effect" src="/img/line.png" alt="line" />
+            <h2 className="subtitle reveal-effect">Just enjoy it.</h2>
+          </div>
+        </section>
+      </div>
     </>
   );
 };

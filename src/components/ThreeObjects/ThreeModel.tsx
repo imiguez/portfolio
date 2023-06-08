@@ -25,9 +25,7 @@ const ThreeModel: FC<ThreeModelInterface> = (props) => {
   return (
     <>
       <mesh rotation={rotation} receiveShadow={true} castShadow>
-        <primitive {...primitive} >
-          {props.children}
-        </primitive>
+        <primitive {...primitive}>{props.children}</primitive>
       </mesh>
     </>
   );

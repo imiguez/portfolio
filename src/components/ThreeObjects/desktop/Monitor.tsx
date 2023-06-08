@@ -8,11 +8,12 @@ const Monitor: FC = () => {
   const model: ThreeModelInterface = {
     url: "./models/acer_monitor/scene.gltf",
     scale: 18,
-    objectPosition: [0, -11, -35],
+    objectPosition: [20, -5, 0],
+    // objectPosition: [0, -11, -35],
   };
 
   return (
-    <ThreeModel {...model}>
+    <ThreeModel {...model} >
     </ThreeModel>
   );
 };

@@ -1,18 +1,30 @@
 import React, { FC } from "react";
-import { Canvas } from "react-three-fiber";
-import { OrbitControls } from "@react-three/drei";
-
 
 const AboutMe: FC = () => {
 
     return (
-        <Canvas style={{ width: "99vw", height: "89vh", border: "1px solid black" }}
-            camera={{ position: [0, 3, 10] }}
-            shadows={"soft"} >
-            <ambientLight intensity={0.5}/>
-            <OrbitControls />
-        </Canvas>
-    )
-}
+        <>
+          <div className="section about-me">
+            <section className="about-me-container">
+              <div className="">
+                <h1 className="title side-effect">Hi, I'm Ignacio Miguez</h1>
+              </div>
+
+            <div className="subtitle-container">
+              <img className="line-img side-effect" src="/img/line.png" alt="line" />
+              <h2 className="subtitle side-effect">Fullstack developer</h2>
+            </div>
+            <p className="about-me-text">
+              I'm from <strong>Tandil, Argentina</strong>. I started to study Web Development at Unicen 
+              University at 2020. In the career I lerned the following technologies/concepts:
+            </p>
+          </section>
+          </div>
+          <div className="section about-me-monitor">
+
+          </div>
+        </>
+      );
+    };
 
 export default AboutMe;

@@ -1,20 +1,62 @@
 * {
-  font-family: Ubuntu;
+  font-family: DM Sans;
+  color: #ffffff;
 }
 
 body {
   margin: 0;
+  height: 100vh;
+  background-image: url("/img/bg.jpeg");
 }
 
-.display-right {
+.main {
+  z-index: 0;
+  position: relative;
+  margin-top: 0vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
+.section {
+  height: 100vh;
+  width: calc(100%-1px);
+  border: 1px solid red;
+  scroll-snap-align: center;
+}
+
+.display {
+  display: initial;
+}
+
+.title {
+  margin: 0;
+  font-size: 60px;
+}
+
+.welcome-container {
+  margin-top: 25vh;
+  margin-left: 15%;
+}
+
+.reveal-effect-container {
+  overflow: hidden;
+}
+.welcome-title {
+  max-width: 50%;
+}
+
+.subtitle-container {
   display: flex;
-  justify-content: right;
+  align-items: center;
 }
 
-.bg-principal {
-  background-color: #2f3e46;
+.line-img {
+  height: 5px;
+  margin-right: 10px;
 }
 
-.color-principal {
-  color: #ffffff;
+.subtitle {
+  font-weight: bold;
+  font-size: 20px;
 }
