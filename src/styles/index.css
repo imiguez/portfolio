@@ -13,9 +13,6 @@ body {
   z-index: 0;
   position: relative;
   margin-top: 0vh;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  overflow-y: auto;
 }
 
 .section {
@@ -39,9 +36,10 @@ body {
   margin-left: 15%;
 }
 
-.reveal-effect-container {
+.reveal-effect-container, .side-effect-container {
   overflow: hidden;
 }
+
 .welcome-title {
   max-width: 50%;
 }

@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect, useRef } from "react";
 import { FC } from "react";
 import { useLoader, useThree } from "react-three-fiber";
-import { Group, Vector3 } from "three";
+import { Group, HemisphereLight, Vector3 } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const HomeBackground: FC = () => {
@@ -28,7 +28,7 @@ const HomeBackground: FC = () => {
         end: "top top",
         scrub: 2,
         toggleActions: "restart reverse restart reverse",
-        markers:true
+        markers: false
       }
     }).to(sphereRef.current.position, {
       x: 5,
@@ -89,7 +89,7 @@ const HomeBackground: FC = () => {
     <>
       <Environment preset={"sunset"} />
       <hemisphereLight args={["#ffb703", "#d5bdaf"]} intensity={0.4} />
-      <Sphere ref={sphereRef} args={[.8, 100, 200]}  position={[1, .5, 0]}>
+      <Sphere ref={sphereRef}  args={[.8, 100, 200]}  position={[1, .5, 0]}>
         <MeshDistortMaterial attach="material" color="#2f3e46" distort={0.3} speed={.8}/>
       </Sphere>
       <mesh >
