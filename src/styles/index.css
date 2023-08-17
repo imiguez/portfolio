@@ -3,6 +3,27 @@
   color: #ffffff;
 }
 
+.display-none {
+  display: none;
+}
+.display {
+  display: initial;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+.color-black {
+  color: black;
+}
+.color-white {
+  color: white;
+}
+.bold {
+  font-weight: bold;
+}
+
 body {
   margin: 0;
   height: 100vh;
@@ -20,10 +41,6 @@ body {
   width: calc(100%-1px);
   border: 1px solid red;
   scroll-snap-align: center;
-}
-
-.display {
-  display: initial;
 }
 
 .title {

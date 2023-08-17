@@ -1,26 +1,24 @@
-import { monitor } from "@/GltfModels";
-import { Environment, Html, MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
+import { oldMonitor } from "@/GltfModels";
+import { Html, MeshDistortMaterial, Sphere, Stage } from "@react-three/drei";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect, useRef } from "react";
 import { FC } from "react";
 import { useLoader, useThree } from "react-three-fiber";
-import { Group, HemisphereLight, Vector3 } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const HomeBackground: FC = () => {
-  const { camera, scene } = useThree();
-  camera.lookAt(new Vector3(0, .5, 0));
 
   const sphereRef = useRef(null);
   const monitorRef = useRef(null);
   
-  let modelsToRender = [monitor];
+  let modelsToRender = [oldMonitor];
   let modelsRendered = [];
   
   gsap.registerPlugin(ScrollTrigger);
   
   useEffect(() => {
+    // Sphere animation
     gsap.timeline({
       scrollTrigger: {
         trigger: ".about-me",
@@ -31,10 +29,11 @@ const HomeBackground: FC = () => {
         markers: false
       }
     }).to(sphereRef.current.position, {
-      x: 5,
+      x: 6,
       z: -1,
       ease: "power4.out",
     });
+    // Monitor entry animation
     gsap.timeline({
       scrollTrigger: {
         trigger: ".about-me",
@@ -46,9 +45,10 @@ const HomeBackground: FC = () => {
     }).to(monitorRef.current.position, {
       x: -1,
       z: .5,
-      y: 0,
+      scale: 3,
       ease: "power3.inOut",
     });
+    // Monitor zoom animation
     gsap.timeline({
       scrollTrigger: {
         trigger: ".about-me-monitor",
@@ -60,7 +60,6 @@ const HomeBackground: FC = () => {
     }).to(monitorRef.current.position, {
       x: 0,
       z: 1,
-      y: 0,
       ease: "linear",
     })
     .to(monitorRef.current.rotation, {
@@ -75,31 +74,27 @@ const HomeBackground: FC = () => {
       node.castShadow = true;
       node.receiveShadow = true;
     });
-    // const group = new Group();
-    // group.add(loader.scene);
     const group = loader.scene;
+    group.scale.set(model.scale, model.scale, model.scale);
     group.position.set(model.objectPosition[0], model.objectPosition[1], model.objectPosition[2]);
     group.rotation.set(model.rotation[0], model.rotation[1], model.rotation[2]);
-    // scene.add(group);
     modelsRendered[model.name] = group;
     monitorRef.current = loader.scene;
   });
   
   return (
     <>
-      <Environment preset={"sunset"} />
+      <Stage environment={{ files: "/venice_sunset_1k.hdr"}} />
       <hemisphereLight args={["#ffb703", "#d5bdaf"]} intensity={0.4} />
-      <Sphere ref={sphereRef}  args={[.8, 100, 200]}  position={[1, .5, 0]}>
+      <Sphere ref={sphereRef}  args={[.8, 100, 200]}  position={[1, 0, 0]}>
         <MeshDistortMaterial attach="material" color="#2f3e46" distort={0.3} speed={.8}/>
       </Sphere>
       <mesh >
         <primitive object={monitorRef.current} >
-          {/* <Html transform style={{width: "1000px", height: "558px"}} 
-            distanceFactor={.627}
-            position={[0, .771, 0]}> */}
-          <Html transform={true} style={{width: "1000px", height: "558px"}} 
-            distanceFactor={.6}
-            position={[0, .758, .09]}>
+          <Html transform={true} style={{width: "500px", height: "435px"}} 
+            distanceFactor={.35}
+            position={[0, .34, .4]}
+            rotation-x={-0.02}>
             <iframe src="./monitor-iframe" style={{width: "100%", height: "100%"}} />
           </Html>
         </primitive>

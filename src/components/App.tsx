@@ -11,13 +11,14 @@ const App: FC = () => {
   return (
     <>
       <div className="canvas-container">
-        <Canvas className="canvas"
+        <Canvas
+          className="canvas"
           gl={{
             toneMapping: THREE.ReinhardToneMapping,
             toneMappingExposure: 2.3,
           }}
-          camera={{position: [0, .5, 3], fov: 50}}
-          shadows 
+          camera={{position: [0, 0, 2.5], fov: 50}}
+          shadows
         >
           <axesHelper scale={1000} />
           <HomeBackground />

@@ -9,6 +9,7 @@
           "components/*": ["src/components/*"],
         //   "types/*": ["src/@types/*"],
           "public/*": ["public/*"],
+          "public/img": ["public/img/*"],
           "styles/*": ["src/styles/*"]
         }
     },
