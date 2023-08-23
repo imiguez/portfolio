@@ -1,5 +1,9 @@
 import { MutableRefObject } from "react";
 
+export type ActiveWindowsType = {
+  "ref": MutableRefObject<any>,
+  "zIndex": number,
+}
 
 export interface TaskBarBtnInterface {
   minimize: () => void;
@@ -15,10 +19,14 @@ export interface WindowHeaderInterface extends TaskBarBtnInterface {
 
 export interface useWindowInterface extends WindowHeaderInterface {
   open?: () => void;
+  updateWindows: () => void;
+  getZIndex: () => number;
+  setZIndex: (number) => void;
   mount: boolean;
 }
 
 export interface WindowInterface extends useWindowInterface {
+  onWindowOpen: () => void;
   onWindowFocus: () => void;
-  activeWindows: MutableRefObject<any>[]
+  onWindowClose: () => void;
 }

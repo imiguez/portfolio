@@ -9,18 +9,18 @@ export const University: FC<WindowInterface> = ({
   minimize,
   maximize,
   close,
+  onWindowOpen,
   onWindowFocus,
+  onWindowClose,
   windowRef,
   taskBarRef,
   title,
-  activeWindows
 }) => {
 
   useEffect(() => {
-    activeWindows.push(windowRef);
-    onWindowFocus();
+    onWindowOpen();
     return () => {
-      activeWindows.splice(activeWindows.indexOf(windowRef), 1);
+      onWindowClose();
     };
   }, []);
 
