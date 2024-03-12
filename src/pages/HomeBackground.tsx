@@ -44,7 +44,8 @@ const HomeBackground: FC = () => {
       }
     }).to(monitorRef.current.position, {
       x: -1,
-      z: .5,
+      // z: .5,
+      // z: -2,
       scale: 3,
       ease: "power3.inOut",
     });
@@ -59,7 +60,9 @@ const HomeBackground: FC = () => {
       }
     }).to(monitorRef.current.position, {
       x: 0,
-      z: 1,
+      // z: .5,
+      // z: -6,
+      // y: -1.3,
       ease: "linear",
     })
     .to(monitorRef.current.rotation, {
@@ -91,11 +94,14 @@ const HomeBackground: FC = () => {
       </Sphere>
       <mesh >
         <primitive object={monitorRef.current} >
-          <Html transform={true} style={{width: "500px", height: "435px"}} 
-            distanceFactor={.35}
-            position={[0, .34, .4]}
-            rotation-x={-0.02}>
-            <iframe src="./monitor-iframe" style={{width: "100%", height: "100%"}} />
+          <Html transform={true} //style={{width: "500px", height: "435px"}} 
+          style={{width: "750px", height: "652px"}} 
+            // distanceFactor={.35}
+            distanceFactor={.235}
+            // position={[0, .34, .4]}
+            position={[0, .335, .39]}
+            rotation-x={-0.0}>
+              <iframe src="./monitor-iframe" style={{width: "100%", height: "100%"}} />
           </Html>
         </primitive>
       </mesh>

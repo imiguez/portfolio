@@ -1,26 +1,26 @@
-import { TaskBarBtnInterface } from "@/interfaces/WindowInterface";
-import React from "react";
-import { FC } from "react";
+import { WindowInterface } from '@/interfaces/WindowInterface';
+import { useWindowsStore } from '@/store/windowsStore';
+import React from 'react';
+import { FC } from 'react';
 
-export const TaskBarBtn: FC<TaskBarBtnInterface> = ({
-  minimize,
-  taskBarRef,
-  title,
-}) => {
+interface TaskBarBtnInterface {
+  window: WindowInterface;
+}
+
+export const TaskBarBtn: FC<TaskBarBtnInterface> = ({ window }) => {
+  
+  const { minimizeWindow } = useWindowsStore();
+
   return (
     <button
-      ref={taskBarRef}
+      ref={window.taskBarBtnRef}
       onClick={() => {
-        minimize();
+        minimizeWindow(window);
       }}
       className="university-task-bar-btn btn-selected"
     >
-      <img
-        className="program-icon mini-icon"
-        src="img/program-icon.png"
-        alt=""
-      />
-      <p className="text color-black">{title}</p>
+      <img className="program-icon mini-icon" src="img/program-icon.png" alt="" />
+      <p className="text color-black">{window.title}</p>
     </button>
   );
-};
+}

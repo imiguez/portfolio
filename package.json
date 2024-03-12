@@ -22,9 +22,11 @@
     "react-router-dom": "^6.11.1",
     "react-three-fiber": "^6.0.13",
     "react-tilt": "^1.0.2",
-    "three": "^0.152.2"
+    "three": "^0.152.2",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@types/node": "^20.11.25",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "@vitejs/plugin-react": "^4.0.0",
