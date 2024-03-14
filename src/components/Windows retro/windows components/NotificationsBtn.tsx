@@ -4,7 +4,6 @@ const NotificationsBtn = () => {
   const [time, setTime] = useState<Date>(new Date());
 
   useEffect(() => {
-    console.log('mounting MonitorIframe');
     let animationFrameId;
     const tick = () => {
       setTime(new Date());

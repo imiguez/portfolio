@@ -1,35 +1,18 @@
 import { createBrowserRouter } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import React from "react";
-import Home from "./pages/Home";
+import App from "./App";
 import { MonitorIframe } from "./pages/MonitorIframe";
-import App from "./components/App";
-import { MonitorIframe2 } from "./pages/MonitorIframe2";
-import PruebaIframe from "./PruebaIframe";
+import LoadingMessage from "./pages/LoadingMessage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <NavBar />,
-        children: [
-          {
-            path: "/",
-            element: <Home />,
-          },
-        ],
-      },
-    ]
+    children: []
   },
   {
     path: "/monitor-iframe",
-    element: <MonitorIframe2 />,
+    element: <MonitorIframe />,
   },
-  {
-    path: "/prueba-iframe",
-    element: <PruebaIframe />,
-  }
 ]);

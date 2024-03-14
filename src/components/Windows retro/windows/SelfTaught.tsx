@@ -3,17 +3,13 @@ import { WindowInterface } from '@/interfaces/WindowInterface';
 import React from 'react';
 import { FC } from 'react';
 import { BasicWindow } from '../windows components/BasicWindow';
+import { WindowProgramOptions } from '../windows components/WindowProgramOptions';
 
 export const SelfTaught: FC<{window: WindowInterface}> = ({ window }) => {
   
   return (
     <BasicWindow window={window} >
-      <div className="program-options unselectable">
-        <p className="text color-black">File</p>
-        <p className="text color-black">Edit</p>
-        <p className="text color-black">View</p>
-        <p className="text color-black">Help</p>
-      </div>
+      <WindowProgramOptions />
 
       <section className="university-section">
         <OpenWindowBtn

@@ -4,13 +4,13 @@ import { FC } from 'react';
 import { WindowHeader } from './WindowHeader';
 import { useWindowsStore } from '@/store/windowsStore';
 
-interface CSSClasses {
+interface BasicWindowInterface {
   window: WindowInterface;
   classes?: string;
   children?: JSX.Element | JSX.Element[];
 }
 
-export const BasicWindow: FC<CSSClasses> = ({ window, classes, children }) => {
+export const BasicWindow: FC<BasicWindowInterface> = ({ window, classes, children }) => {
   const { focusWindow, windows } = useWindowsStore();
 
 

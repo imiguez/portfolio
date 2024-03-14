@@ -42,16 +42,7 @@ body {
   background-image: url("/img/bg.jpeg");
 }
 
-.main {
-  z-index: 0;
-  position: relative;
-  margin-top: 0vh;
-}
-
 .section {
-  height: 100vh;
-  width: calc(100%-1px);
-  border: 1px solid red;
   scroll-snap-align: center;
 }
 
@@ -86,4 +77,22 @@ body {
 .subtitle {
   font-weight: bold;
   font-size: 20px;
+}
+
+.progress {
+  position: absolute;
+  bottom: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.progress p {
+  max-width: fit-content;
+}
+
+.progress-animation {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 2.5s linear;
 }

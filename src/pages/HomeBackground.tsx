@@ -1,110 +1,74 @@
-import { oldMonitor } from "@/GltfModels";
-import { Html, MeshDistortMaterial, Sphere, Stage } from "@react-three/drei";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useEffect, useRef } from "react";
-import { FC } from "react";
-import { useLoader, useThree } from "react-three-fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import ThreeModel from '@/components/ThreeObjects/ThreeModel';
+import { desk, keyboard, oldMonitor } from '@/constants/GltfModels';
+import { Html, Stage } from '@react-three/drei';
+import React, { useEffect, useState } from 'react';
+import { FC } from 'react';
+import { useThree } from 'react-three-fiber';
+import * as T from 'three';
 
-const HomeBackground: FC = () => {
+interface HomeBackgroundInterface {
+  setEnableRotateControl: (enable: boolean) => void,
+}
 
-  const sphereRef = useRef(null);
-  const monitorRef = useRef(null);
-  
-  let modelsToRender = [oldMonitor];
-  let modelsRendered = [];
-  
-  gsap.registerPlugin(ScrollTrigger);
-  
+const HomeBackground: FC<HomeBackgroundInterface> = ({ setEnableRotateControl }) => {
+  const { camera } = useThree();
+  const [clicked, setClicked] = useState<boolean>(false);
+  const finalPos = {
+    x: -.3,
+    y: .7,
+    z: -1.8
+  }
+  const lookAt = {
+    x: -1.5,
+    y: .2,
+    z: 2
+  }
+
   useEffect(() => {
-    // Sphere animation
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: ".about-me",
-        start: "top bottom",
-        end: "top top",
-        scrub: 2,
-        toggleActions: "restart reverse restart reverse",
-        markers: false
+    let animationFrameId;
+    const tick = async () => {
+      if (clicked) {
+        console.log('clicked useFrame', clicked);
+        if (camera.position.x < finalPos.x+0.01 && camera.position.x > finalPos.x-0.01 &&
+          camera.position.y < finalPos.y+0.01 && camera.position.y > finalPos.y-0.01 &&
+          camera.position.z < finalPos.z+0.01 && camera.position.z > finalPos.z-0.01) {
+          setClicked(false);
+          cancelAnimationFrame(animationFrameId);
+        } else {
+          camera.position.x = T.MathUtils.damp(camera.position.x, finalPos.x, 1, 0.1);
+          camera.position.y = T.MathUtils.damp(camera.position.y, finalPos.y, 1, 0.1);
+          camera.position.z = T.MathUtils.damp(camera.position.z, finalPos.z, .5, 0.1);
+          camera.lookAt(new T.Vector3(lookAt.x, lookAt.y, lookAt.z));
+        }
       }
-    }).to(sphereRef.current.position, {
-      x: 6,
-      z: -1,
-      ease: "power4.out",
-    });
-    // Monitor entry animation
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: ".about-me",
-        start: "top bottom",
-        end: "top top",
-        scrub: .0,
-        toggleActions: "restart none reverse restart",
-      }
-    }).to(monitorRef.current.position, {
-      x: -1,
-      // z: .5,
-      // z: -2,
-      scale: 3,
-      ease: "power3.inOut",
-    });
-    // Monitor zoom animation
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: ".about-me-monitor",
-        start: "top bottom",
-        end: "top center",   
-        scrub: .0,
-        toggleActions: "play reverse none reverse",
-      }
-    }).to(monitorRef.current.position, {
-      x: 0,
-      // z: .5,
-      // z: -6,
-      // y: -1.3,
-      ease: "linear",
-    })
-    .to(monitorRef.current.rotation, {
-      y: 0,
-      ease: "linear",
-    }, "<");
-  });
+      animationFrameId = requestAnimationFrame(tick);
+    };
+    animationFrameId = requestAnimationFrame(tick);
+    return () => {
+      cancelAnimationFrame(animationFrameId); // Execute when dismount
+    };
+  }, [clicked]);
 
-  modelsToRender.forEach((model) => {
-    const loader = useLoader(GLTFLoader, model.url);
-    loader.scene.traverse((node) => {
-      node.castShadow = true;
-      node.receiveShadow = true;
-    });
-    const group = loader.scene;
-    group.scale.set(model.scale, model.scale, model.scale);
-    group.position.set(model.objectPosition[0], model.objectPosition[1], model.objectPosition[2]);
-    group.rotation.set(model.rotation[0], model.rotation[1], model.rotation[2]);
-    modelsRendered[model.name] = group;
-    monitorRef.current = loader.scene;
-  });
-  
+  const onKeyboardClick = () => {
+    setClicked(true);
+    setEnableRotateControl(false)
+  }
+
   return (
     <>
-      <Stage environment={{ files: "/venice_sunset_1k.hdr"}} />
-      <hemisphereLight args={["#ffb703", "#d5bdaf"]} intensity={0.4} />
-      <Sphere ref={sphereRef}  args={[.8, 100, 200]}  position={[1, 0, 0]}>
-        <MeshDistortMaterial attach="material" color="#2f3e46" distort={0.3} speed={.8}/>
-      </Sphere>
-      <mesh >
-        <primitive object={monitorRef.current} >
-          <Html transform={true} //style={{width: "500px", height: "435px"}} 
-          style={{width: "750px", height: "652px"}} 
-            // distanceFactor={.35}
-            distanceFactor={.235}
-            // position={[0, .34, .4]}
-            position={[0, .335, .39]}
-            rotation-x={-0.0}>
-              <iframe src="./monitor-iframe" style={{width: "100%", height: "100%"}} />
-          </Html>
-        </primitive>
-      </mesh>
+      <Stage environment={{ files: '/venice_sunset_1k.hdr' }} />
+      <hemisphereLight args={['#ffb703', '#d5bdaf']} intensity={0.4} />
+      <ThreeModel model={oldMonitor}>
+        <Html transform={true} occlude
+          style={{ width: '800px', height: '652px' }}
+          //style={{width: "750px", height: "652px"}}
+          distanceFactor={0.235} position={[0, 0.335, 0.4066]}
+          rotation-x={-0.05}>
+          <iframe src="./monitor-iframe" style={{ width: '100%', height: '100%' }} />
+        </Html>
+      </ThreeModel>
+      <ThreeModel model={keyboard} onClick={onKeyboardClick} hoverEffect={{color: 'grey'}} />
+      <ThreeModel model={desk} />
     </>
   );
 };
