@@ -5,13 +5,13 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   //change port for production
-  preview: {
-    port: process.env.PORT,
-  },
-  // for dev
-  server: {
-    port: 3000,
-  },
+  // preview: {
+  //   port: process.env.PORT,
+  // },
+  // // for dev
+  // server: {
+  //   port: 3000,
+  // },
   plugins: [react()],
   resolve: {
     alias: {
