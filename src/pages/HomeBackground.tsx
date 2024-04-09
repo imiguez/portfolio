@@ -64,7 +64,7 @@ const HomeBackground: FC<HomeBackgroundInterface> = ({ setEnableRotateControl })
           //style={{width: "750px", height: "652px"}}
           distanceFactor={0.235} position={[0, 0.335, 0.4066]}
           rotation-x={-0.05}>
-          <iframe src="./monitor-iframe" style={{ width: '100%', height: '100%' }} />
+          <iframe src="./monitor-iframe" style={{ width: '100%', height: '100%' }} id='monitor-iframe' />
         </Html>
       </ThreeModel>
       <ThreeModel model={keyboard} onClick={onKeyboardClick} hoverEffect={{color: 'grey'}} />

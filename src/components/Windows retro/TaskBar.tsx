@@ -23,7 +23,7 @@ const TaskBar = () => {
       <div className="task-bar">
         <div className="task-bar-subcontainer">
           <button className="start-btn" onClick={() => alert('click')}>
-            <img className="start-image" src="img/windows-start.png" alt="" />
+            <img className="start-image" src="img/Windows retro icons/windows-start.png" alt="" />
             <p className="text color-black">Start</p>
           </button>
           <div className="start-btn-separetor"></div>

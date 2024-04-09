@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { FC } from 'react';
-import { OpenWindowBtn } from '@/components/OpenWindowBtn';
 import TaskBar from '@/components/Windows retro/TaskBar';
 import { useWindowsStore } from '@/store/windowsStore';
+import { OpenWindowBtn } from '@/components/Windows retro/OpenWindowBtn';
 
 export const MonitorIframe: FC = () => {
   const {windowsComponent} = useWindowsStore();
@@ -15,9 +15,11 @@ export const MonitorIframe: FC = () => {
 
         {windowsComponent.map((window) => (window.component))}
 
-        <OpenWindowBtn title="University" imgSrc="img/program-icon.png" />
+        <OpenWindowBtn title="University" icon="img/unicen-short-logo.jpg" titleColor='white' />
 
-        <OpenWindowBtn title="Self Taught" imgSrc="img/program-icon.png" />
+        <OpenWindowBtn title="Self Taught" icon="img/Windows retro icons/program-icon.png" titleColor='white' />
+
+        <OpenWindowBtn title="Proyects" icon="img/Windows retro icons/program-icon.png" titleColor='white' />
       </div>
 
       <TaskBar></TaskBar>

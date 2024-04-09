@@ -1,7 +1,7 @@
 import { WindowInterface } from '@/interfaces/WindowInterface';
 import { FC, useEffect } from 'react';
 import React from 'react';
-import { BasicWindow } from '../windows components/BasicWindow';
+import { BasicWindow } from '../../windows components/BasicWindow';
 import { useWindowsStore } from '@/store/windowsStore';
 
 export const Beerbee: FC<{ window: WindowInterface }> = (params) => {
@@ -19,7 +19,9 @@ export const Beerbee: FC<{ window: WindowInterface }> = (params) => {
 
   return (
     <BasicWindow window={w}>
-      <iframe name='BeerbeeIframe' style={{ width: '100%', height: '100%' }} />
+      <section className='iframe-container' >
+        <iframe name='BeerbeeIframe' className='iframe'/>
+      </section>
     </BasicWindow>
   );
 };

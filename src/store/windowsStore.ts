@@ -44,9 +44,16 @@ export const useWindowsStore = create<WindowsStoreInterface>((set, get) => ({
         ...state,
         windows: w,
     }}),
-    maximizeWindow: (window: WindowInterface) => {
-        window.windowRef.current.classList.toggle("maximize");
-        
+    maximizeWindow: (w: WindowInterface) => {
+        w.windowRef.current.classList.toggle("maximize");
+        let iframe = document.getElementsByClassName('windows-container')[0];
+        if (w.windowRef.current.style.width == (iframe.clientWidth-7) +'px') {
+            w.windowRef.current.style.width = '300px';
+            w.windowRef.current.style.height = 'auto';
+        } else {
+            w.windowRef.current.style.width = (iframe.clientWidth-7) + 'px';
+            w.windowRef.current.style.height = (iframe.clientHeight*0.95) + 'px';
+        }
     },
     focusWindow: (window: WindowInterface) => set(state => {
         let w = state.windows;

@@ -2,7 +2,7 @@ import React, { FC, useEffect, useMemo, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
 import * as THREE from 'three';
 import 'styles/canvas.css';
-import 'styles/about-me.css';
+import 'styles/windows.css';
 import HomeBackground from '@/pages/HomeBackground';
 import { OrbitControls, useProgress } from '@react-three/drei';
 import LoadingMessage from './pages/LoadingMessage';
