@@ -1,18 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
-import NavBar from "./components/NavBar";
 import React from "react";
-import App from "./App";
-import { MonitorIframe } from "./pages/MonitorIframe";
-import LoadingMessage from "./pages/LoadingMessage";
+import Main from "./pages/Main/Main";
+import { OS } from "./pages/DesktopApp/OS/OS";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Main />,
     children: []
   },
   {
-    path: "/monitor-iframe",
-    element: <MonitorIframe />,
+    path: "/OS",
+    element: <OS/>,
   },
 ]);

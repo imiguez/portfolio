@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { FC } from 'react';
+import 'pages/DesktopApp/OS/OS.css';
 import TaskBar from '@/components/Windows retro/TaskBar';
 import { useWindowsStore } from '@/store/windowsStore';
 import { OpenWindowBtn } from '@/components/Windows retro/OpenWindowBtn';
 
-export const MonitorIframe: FC = () => {
+export const OS: FC = () => {
   const {windowsComponent} = useWindowsStore();
 
   return (

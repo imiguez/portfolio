@@ -1,0 +1,22 @@
+.canvas {
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.progress {
+  position: absolute;
+  bottom: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.progress p {
+  max-width: fit-content;
+}
+
+.progress-animation {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 2.5s linear;
+}

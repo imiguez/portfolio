@@ -1,0 +1,42 @@
+* {
+    font-family: DM Sans;
+    color: #ffffff;
+  }
+  
+  .unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .visibility-hide{
+    visibility: hidden;
+  }
+  .display-none {
+    display: none;
+  }
+  .display {
+    display: initial;
+  }
+  
+  button {
+    padding: 0;
+    cursor: pointer;
+  }
+  .color-black {
+    color: black;
+  }
+  .color-white {
+    color: white;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  
+  body {
+    margin: 0;
+    background-image: url("/img/bg.jpeg");
+  }

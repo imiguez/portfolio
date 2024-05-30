@@ -157,6 +157,11 @@
     padding: 1px 3px 3px 1px;
 }
 
+.program-exe.proyects {
+    width: 500px;
+    min-height: 400px;
+}
+
 .maximize {
     top: 0 !important;
     left: 0 !important;
