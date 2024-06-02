@@ -2,7 +2,7 @@ import { useWindowsStore } from '@/store/windowsStore';
 import React, { useMemo, useState } from 'react';
 import { TaskBarBtn } from './TaskBarBtn';
 import { WindowInterface } from '@/interfaces/WindowInterface';
-import NotificationsBtn from './windows components/NotificationsBtn';
+import NotificationsBtn from './windowsComponents/NotificationsBtn';
 
 const TaskBar = () => {
   const { windows } = useWindowsStore();

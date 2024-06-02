@@ -30,15 +30,6 @@
   overflow: hidden;
 }
 
-.reveal-effect-container .title-and-btns {
-  display: flex;
-  justify-content: space-between;
-}
-
-.reveal-effect {
-  translate: 0px -200px;
-}
-
 .subtitle-container {
   display: flex;
   align-items: center;

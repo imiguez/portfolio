@@ -7,10 +7,11 @@ import { useWindowsStore } from '@/store/windowsStore';
 interface BasicWindowInterface {
   window: WindowInterface;
   classes?: string;
+  additionalStyles?: React.CSSProperties,
   children?: JSX.Element | JSX.Element[];
 }
 
-export const BasicWindow: FC<BasicWindowInterface> = ({ window, classes, children }) => {
+export const BasicWindow: FC<BasicWindowInterface> = ({ window, classes, additionalStyles, children }) => {
   const { focusWindow, windows } = useWindowsStore();
 
 
@@ -21,7 +22,7 @@ export const BasicWindow: FC<BasicWindowInterface> = ({ window, classes, childre
   }, []);
 
   return (
-    <article ref={window.windowRef} className={`program-exe ${classes}`} onClick={() => focusWindow(window)} onFocus={() => focusWindow(window)}>
+    <article ref={window.windowRef} className={`program-exe ${classes}`} onClick={() => focusWindow(window)} onFocus={() => focusWindow(window)} style={additionalStyles}>
       <WindowHeader window={window} />
       {children}
     </article>

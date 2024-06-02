@@ -1,8 +1,8 @@
 import { WindowInterface } from '@/interfaces/WindowInterface';
 import { FC, useEffect } from 'react';
 import React from 'react';
-import { BasicWindow } from '../../windows components/BasicWindow';
 import { useWindowsStore } from '@/store/windowsStore';
+import { BasicWindow } from '../../windowsComponents/BasicWindow';
 
 export const Beerbee: FC<{ window: WindowInterface }> = (params) => {
   const w = params.window;

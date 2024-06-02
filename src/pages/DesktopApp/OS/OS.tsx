@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { FC } from 'react';
 import 'pages/DesktopApp/OS/OS.css';
-import TaskBar from '@/components/Windows retro/TaskBar';
 import { useWindowsStore } from '@/store/windowsStore';
-import { OpenWindowBtn } from '@/components/Windows retro/OpenWindowBtn';
+import { OpenWindowBtn } from '@/components/WindowsRetro/OpenWindowBtn';
+import TaskBar from '@/components/WindowsRetro/TaskBar';
 
 export const OS: FC = () => {
   const {windowsComponent} = useWindowsStore();

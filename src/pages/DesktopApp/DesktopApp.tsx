@@ -66,9 +66,7 @@ const DesktopApp: FC = () => {
               <h1 className="title welcome-title reveal-effect">Welcome to</h1>
             </div>
             <div className="reveal-effect-container ">
-              <div className="title-and-btns">
-                <h1 className="title welcome-title reveal-effect">my portfolio!</h1>
-              </div>
+              <h1 className="title welcome-title reveal-effect">my portfolio!</h1>
             </div>
             <div className="subtitle-container reveal-effect-container">
               <img className="line-img reveal-effect" src="/img/line.png" alt="line" />

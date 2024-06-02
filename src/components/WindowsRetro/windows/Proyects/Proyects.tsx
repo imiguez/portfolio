@@ -2,11 +2,9 @@ import { ProyectsMock } from "@/assets/mocks/ProyectsMock";
 import { WindowInterface } from "@/interfaces/WindowInterface";
 import React from "react";
 import { FC, useState } from "react";
-import ProgramIconBtn from "../../ProgramIconBtn";
-import { BasicWindow } from "../../windows components/BasicWindow";
-import { WindowProgramOptions } from "../../windows components/WindowProgramOptions";
-import { Beerbee } from "./Beerbee";
 import { OpenWindowBtn } from "../../OpenWindowBtn";
+import { BasicWindow } from "../../windowsComponents/BasicWindow";
+import { WindowProgramOptions } from "../../windowsComponents/WindowProgramOptions";
 
 
 export const Proyects: FC<{window: WindowInterface}> = ({ window }) => {

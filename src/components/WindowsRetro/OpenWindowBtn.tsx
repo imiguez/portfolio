@@ -7,6 +7,8 @@ import { Beerbee } from './windows/Proyects/Beerbee';
 import ProgramIconBtn from './ProgramIconBtn';
 import { ProgramIconBtnInterface } from '@/interfaces/MookInterfaces';
 import { Proyects } from './windows/Proyects/Proyects';
+import { Filters } from './windows/Proyects/Filters';
+import { RunnerGame } from './windows/Proyects/RunnerGame';
 
 
 export const OpenWindowBtn: FC<ProgramIconBtnInterface> = (params) => {
@@ -35,6 +37,12 @@ export const OpenWindowBtn: FC<ProgramIconBtnInterface> = (params) => {
       break;
       case 'Beerbee':
         windowComponent = <Beerbee window={window} />;
+      break;
+      case 'Paint & Filters':
+        windowComponent = <Filters window={window} />;
+      break;
+      case 'Runner Game':
+        windowComponent = <RunnerGame window={window} />;
       break;
       default:
         windowComponent = <p>Not Found window.</p>
