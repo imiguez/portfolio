@@ -24,7 +24,7 @@ export const Projects: FC<{window: WindowInterface}> = ({ window }) => {
         <p className="text color-black unselectable">{description}</p>
       </section>
       <footer>
-        <p className="text color-black unselectable">{ProjectsMock.length} object[s]</p>
+        <p className="text text-retro text-small color-black unselectable">{ProjectsMock.length} object[s]</p>
       </footer>
     </BasicWindow>
   );

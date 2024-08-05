@@ -17,7 +17,7 @@ const NotificationsBtn = () => {
 
   return (
     <button className="notifications-btn">
-      <p className="text color-black">
+      <p className="text notifications-text color-black">
         {time.getHours()}:{time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes()} {time.getHours() > 12 ? 'PM' : 'AM'}
       </p>
     </button>

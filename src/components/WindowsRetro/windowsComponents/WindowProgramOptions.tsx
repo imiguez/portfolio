@@ -4,10 +4,10 @@ import { FC } from "react";
 export const WindowProgramOptions: FC = () => {
   return (
     <div className="program-options unselectable">
-      <p className="text color-black">File</p>
-      <p className="text color-black">Edit</p>
-      <p className="text color-black">View</p>
-      <p className="text color-black">Help</p>
+      <p className="text text-retro color-black">File</p>
+      <p className="text text-retro color-black">Edit</p>
+      <p className="text text-retro color-black">View</p>
+      <p className="text text-retro color-black">Help</p>
     </div>
   );
 };

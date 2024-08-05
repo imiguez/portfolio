@@ -22,7 +22,7 @@ export const SelfTaught: FC<{window: WindowInterface}> = ({ window }) => {
       </section>
 
       <footer>
-        <p className="text color-black unselectable">{SelfTaughtMock.length} object[s]</p>
+        <p className="text text-retro text-small color-black unselectable">{SelfTaughtMock.length} object[s]</p>
       </footer>
     </BasicWindow>
   );

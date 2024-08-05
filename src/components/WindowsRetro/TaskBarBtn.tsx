@@ -20,7 +20,7 @@ export const TaskBarBtn: FC<TaskBarBtnInterface> = ({ window }) => {
       className="university-task-bar-btn btn-selected"
     >
       <img className="program-icon mini-icon" src={window.icon} alt="" />
-      <p className="text color-black">{window.title}</p>
+      <p className="text text-retro color-black">{window.title}</p>
     </button>
   );
 }

@@ -1,7 +1,7 @@
 import { ProgramIconBtnInterface } from '@/interfaces/MookInterfaces'
 import React, { FC, useState } from 'react'
 
-const ProgramIconBtn: FC<ProgramIconBtnInterface> = ({title, titleColor, icon, loading_icon, onDoubleClick, onClick}) => {
+const ProgramIconBtn: FC<ProgramIconBtnInterface> = ({title, titleColor, icon, loading_icon, classes, onDoubleClick, onClick}) => {
   const [wasLoaded, setWasLoaded] = useState(false);
 
   return (
@@ -28,7 +28,7 @@ const ProgramIconBtn: FC<ProgramIconBtnInterface> = ({title, titleColor, icon, l
         </div>
       </div>
 
-      <p className="text" style={{ color: titleColor }}>
+      <p className={`text ${classes ?? ""}`} style={{ color: titleColor }}>
         {title}
       </p>
     </button>

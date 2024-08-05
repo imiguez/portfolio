@@ -21,7 +21,7 @@ export const University: FC<{ window: WindowInterface }> = ({ window }) => {
         </section>
       
       <footer>
-        <p className="text color-black unselectable">{UniversityMock.length} object[s]</p>
+        <p className="text text-retro text-small color-black unselectable">{UniversityMock.length} object[s]</p>
       </footer>
     </BasicWindow>
   );

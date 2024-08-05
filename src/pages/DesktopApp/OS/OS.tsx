@@ -23,11 +23,11 @@ export const OS: FC = () => {
 
         {windowsComponent.map((window) => (window.component))}
 
-        <OpenWindowBtn title="University" icon="img/unicen-logo.png" loading_icon='img/unicen-logo-opt.png' titleColor='white' />
+        <OpenWindowBtn classes='text-retro bold' title="University" icon="img/unicen-logo.png" loading_icon='img/unicen-logo-opt.png' titleColor='white' />
 
-        <OpenWindowBtn title="Self Taught" icon="img/Windows retro icons/program-icon.png" loading_icon='img/Windows retro icons/program-icon.png' titleColor='white' />
+        <OpenWindowBtn classes='text-retro bold' title="Self Taught" icon="img/Windows retro icons/program-icon.png" loading_icon='img/Windows retro icons/program-icon.png' titleColor='white' />
 
-        <OpenWindowBtn title="Projects" icon="img/Windows retro icons/program-icon.png" loading_icon='img/Windows retro icons/program-icon.png' titleColor='white' />
+        <OpenWindowBtn classes='text-retro bold' title="Projects" icon="img/Windows retro icons/program-icon.png" loading_icon='img/Windows retro icons/program-icon.png' titleColor='white' />
       </div>
 
       <TaskBar></TaskBar>

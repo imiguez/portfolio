@@ -49,7 +49,7 @@ export const WindowHeader: FC<{window: WindowInterface}> = ({ window }) => {
     <header ref={headerRef} className="program-header" >
       <div>
         <img className="program-icon mini-icon" src={window.icon} alt="" />
-        <p className="text color-white bold unselectable">{window.title}</p>
+        <p className="text text-retro color-white bold unselectable">{window.title}</p>
       </div>
       <div>
         <button

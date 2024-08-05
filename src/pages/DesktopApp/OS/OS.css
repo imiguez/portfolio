@@ -41,10 +41,22 @@
 .windows-container button {
     border-radius: 0px;
 }
+@media only screen and (min-width: 800px) {
+    .text {font-size: 14px;}
+    .text-small {font-size: 12px}
+    .start-btn p {font-size: 18px; font-weight: bold; align-content: center;}
+}
+@media only screen and (max-width: 800px) {
+    .text {font-size: 10px;}
+    .text-small {font-size: 10px}
+    .start-btn p {font-size: 14px; font-weight: bold; align-content: center;}
+}
 .text {
     white-space-collapse: preserve;
-    font-size: 10px;
     margin: 0;
+}
+.text-retro {
+    font-family: Millennium,Times New Roman,Times,serif;
 }
 
 /*                                              TASK BAR */
@@ -58,7 +70,6 @@
     display: flex;
     align-items: end;
     justify-content: center;
-    /* border-top: solid 1px rgba(0, 0, 0, 0.542); */
     padding: 0 .25%;
 }
 
@@ -87,12 +98,18 @@
     border-bottom: 0.5px solid #495057;
     border-left: 0.5px solid white;
     display: flex;
+    align-items: center;
     padding: 0 5px 0 0;
+    min-width: 4vw;
 }
-
+@media only screen and (min-width: 800px) {
+    .start-image {width: 20px; height: 20px; }
+}
+@media only screen and (max-width: 800px) {
+    .start-image {width: 14px; height: 14px;}
+}
 .start-image {
-    width: 14px;
-    margin: 1px 2px 0 0;
+    margin: 1px 2px 0 5px;
     transform: rotateZ(-20deg);
 }
 
@@ -128,6 +145,13 @@
     border-bottom: .5px solid #ced4da;
     border-right: .5px solid #ced4da;
     min-width: 60px;
+}
+
+@media only screen and (min-width: 800px) {
+    .notifications-text {font-family: MSSerif; font-size: 11px;}
+}
+@media only screen and (max-width: 800px) {
+    .notifications-text {font-family: MSSerif; font-size: 10px;}
 }
 
 /*                                              UNIVERSITY.EXE */
@@ -255,12 +279,20 @@
     font-size: 12px;
     margin: 5px;
 }
+@media only screen and (min-width: 800px) {
+    .program-exe footer {height: 18px;}
 
+}
+@media only screen and (max-width: 800px) {
+    .program-exe footer {height: 14px}
+}
 .program-exe footer {
-    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
     padding: 0;
     margin: 5px 2px 0 2px;
 }
 .program-exe footer p {
-    margin-left: 4px;
+    margin-right: 4px;
 }
