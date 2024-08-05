@@ -11,7 +11,7 @@ const NavBar: FC = () => {
         <li className="nav-btn">Home</li>
         <li className="nav-btn">About Me</li>
         <li className="nav-btn">Experience</li>
-        <li className="nav-btn">Proyects</li>
+        <li className="nav-btn">Projects</li>
         <li className="nav-btn">Contact Me</li>
       </ul>
 

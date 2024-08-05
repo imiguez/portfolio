@@ -14,9 +14,6 @@ export const University: FC<{ window: WindowInterface }> = ({ window }) => {
         <WindowProgramOptions />
         <section className="window-technologies-container">
           {UniversityMock.map(tech => <ProgramIconBtn {...tech}  onDoubleClick={() => setDescription(tech.description)}/>)}
-          {UniversityMock.length % 2 != 0 &&
-            <div className="university-exe-btn unselectable program-icon"></div>
-          }
         </section>
 
         <section className='window-descriptions-container'>

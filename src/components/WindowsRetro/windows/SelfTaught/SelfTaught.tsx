@@ -15,9 +15,6 @@ export const SelfTaught: FC<{window: WindowInterface}> = ({ window }) => {
 
       <section className="window-technologies-container">
         {SelfTaughtMock.map(tech => <ProgramIconBtn {...tech} onDoubleClick={() => setDescription(tech.description)} />)}
-        {SelfTaughtMock.length % 2 != 0 &&
-          <div className="university-exe-btn unselectable program-icon"></div>
-        }
       </section>
 
       <section className='window-descriptions-container'>

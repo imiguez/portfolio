@@ -52,7 +52,7 @@ export const useWindowsStore = create<WindowsStoreInterface>((set, get) => ({
             w.windowRef.current.style.height = 'auto';
         } else {
             w.windowRef.current.style.width = (iframe.clientWidth-7) + 'px';
-            w.windowRef.current.style.height = (iframe.clientHeight*0.95) + 'px';
+            w.windowRef.current.style.height = (iframe.clientHeight*0.96) + 'px';
         }
     },
     focusWindow: (window: WindowInterface) => set(state => {

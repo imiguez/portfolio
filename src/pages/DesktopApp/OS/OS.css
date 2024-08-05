@@ -42,6 +42,7 @@
     border-radius: 0px;
 }
 .text {
+    white-space-collapse: preserve;
     font-size: 10px;
     margin: 0;
 }
@@ -131,12 +132,17 @@
 
 /*                                              UNIVERSITY.EXE */
 
-.university-exe-btn {
+.exe-btn {
+    max-width: 50px;
     margin: 10px;
     background-color: transparent;
     border: none;
-    max-width: 40px;
 }
+
+.image-to-load {
+    opacity: 0;
+    animation: opacity 200ms ease-in;
+} 
 .program-icon {
     width: 30px;
     padding: 0 5px;
@@ -146,20 +152,12 @@
 }
 .program-exe {
     position: absolute;
-    /* width: 80%;
-    height: 60vh; */
     width: 300px;
-    /* height: 248px; */
     border: 2px solid rgb(229, 230, 231);
     border-bottom: 1px solid black;
     border-right: 1px solid black;
     background-color: #adb5bd;
     padding: 1px 3px 3px 1px;
-}
-
-.program-exe.proyects {
-    /* width: 500px;
-    min-height: 400px; */
 }
 
 .maximize {
@@ -174,7 +172,6 @@
     width: 100%;
     cursor: move;
     height: 2vh;
-    /* height: 15px; */
     display: flex;
     justify-content: space-between;
     padding: 1px 0 2px 0;
@@ -241,21 +238,15 @@
 .window-technologies-container {
     display: flex;
     flex-wrap: wrap;
-    min-height: calc(80% - 21px - 8px - 18px);
+    height: 50%;
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 2px;
     background-color: rgb(229, 230, 231);
 }
 
-.maximize .window-descriptions-container {
-    height: 20%;
-}
-
 .window-descriptions-container {
-    min-height: 20px;
-    max-height: 100px;
-    height: auto;
+    height: calc(48% - 60px);
     margin: 5px 2px 0 2px;
     background-color: #adb5bd;
 }

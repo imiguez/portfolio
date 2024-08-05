@@ -22,7 +22,7 @@ export const BasicWindow: FC<BasicWindowInterface> = ({ window, classes, additio
   }, []);
 
   return (
-    <article ref={window.windowRef} className={`program-exe ${classes}`} onClick={() => focusWindow(window)} onFocus={() => focusWindow(window)} style={additionalStyles}>
+    <article ref={window.windowRef} className={`program-exe ${classes ?? ""}`} onClick={() => focusWindow(window)} onFocus={() => focusWindow(window)} style={additionalStyles}>
       <WindowHeader window={window} />
       {children}
     </article>
