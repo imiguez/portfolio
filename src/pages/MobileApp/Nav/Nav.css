@@ -27,6 +27,8 @@
     top: var(--burger-margin);
     left: calc(100vw - var(--bar-width) - (18px*2) - var(--burger-margin));
     z-index: 3;
+    outline: none;
+    border-style: outset;
 }
 
 .burger-menu .bar {
@@ -81,7 +83,6 @@
     position: fixed;
     z-index: -1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    max-height: 50vh;
     height: max-content;
     width: max-content;
     right: calc(var(--burger-margin) + ((var(--bar-width) + (18px*2)) / 2));

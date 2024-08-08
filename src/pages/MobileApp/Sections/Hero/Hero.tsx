@@ -59,7 +59,7 @@ export default function Hero() {
       </div>
 
 
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+      <svg id='svg' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
         <defs>
           <linearGradient id='gradient' x1="0%" y1="100%" x2="0%" y2="0%">
             <stop offset="0%" stopColor="#430f58"/>
