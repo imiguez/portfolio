@@ -1,7 +1,22 @@
-* {
+html {scroll-behavior: smooth;}
+* {color: white;}
+body {margin: 0;}
+
+@media only screen and (min-width: 700px) {
+  * {
     font-family: DM Sans;
-    color: #ffffff;
   }
+  body {
+    background-image: url("/img/bg.jpeg");
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  * {
+    font-family: Inter, sans-serif;
+  }
+}
+
   
   .unselectable {
     -webkit-touch-callout: none;
@@ -34,9 +49,4 @@
   }
   .bold {
     font-weight: bold;
-  }
-  
-  body {
-    margin: 0;
-    background-image: url("/img/bg.jpeg");
   }

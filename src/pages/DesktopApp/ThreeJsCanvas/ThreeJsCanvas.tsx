@@ -1,5 +1,5 @@
 import { OrbitControls, useProgress } from '@react-three/drei';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { Suspense, useEffect, useMemo, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
 import * as THREE from 'three';
 import 'pages/DesktopApp/ThreeJsCanvas/ThreeJsCanvas.css';
@@ -7,7 +7,6 @@ import ThreeJsScene from '../ThreeJsScene/ThreeJsScene';
 
 export const ThreeJsCanvas = () => {
   const [enableRotateControl, setEnableRotateControl] = useState<boolean>(false);
-  const light = useRef<THREE.SpotLight>()
   const { progress } = useProgress();
 
   useEffect(() => {
@@ -28,6 +27,11 @@ export const ThreeJsCanvas = () => {
 
   return (
     <>
+    <Suspense fallback={
+      <div className={progressClass}>
+        <p>{progress.toPrecision(3)}% progress..</p>
+      </div>
+    }>
       <Canvas id="canvas" className="canvas" shadows
         gl={{
           toneMapping: THREE.ReinhardToneMapping,
@@ -39,9 +43,7 @@ export const ThreeJsCanvas = () => {
 
         <OrbitControls enabled={enableRotateControl} enablePan={false} enableZoom={false} enableRotate={true} />
       </Canvas>
-      <div className={progressClass}>
-        <p>{progress}% progress..</p>
-      </div>
+    </Suspense>
     </>
   );
 }

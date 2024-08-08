@@ -2,6 +2,7 @@ import React, { Suspense, useEffect, useState } from 'react';
 import { lazy } from 'react';
 import 'pages/Main/main.css';
 const DesktopApp = lazy(() => import('../DesktopApp/DesktopApp'));
+const MobileApp = lazy(() => import('../MobileApp/MobileApp'));
 
 
 function Main() {
@@ -24,7 +25,7 @@ function Main() {
     <Suspense fallback={null}>
       {screen === 'desktop' && <DesktopApp/>}
 
-      {screen === 'mobile' && <p>mobile</p>}
+      {screen === 'mobile' && <MobileApp/>}
     </Suspense>
   );
 }
