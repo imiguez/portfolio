@@ -2,6 +2,11 @@ html {scroll-behavior: smooth;}
 * {color: white;}
 body {margin: 0;}
 
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 @media only screen and (min-width: 700px) {
   * {
     font-family: DM Sans;
