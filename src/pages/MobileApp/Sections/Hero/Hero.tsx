@@ -27,7 +27,7 @@ export default function Hero() {
             <stop offset="100%" stopColor="#9612ca"/>
           </linearGradient>
         </defs>
-        <path id='path' fill="url(#gradient)" transform="translate(100 110) scale(1.05)" 
+        <path id='path' fill="url(#gradient)" transform="translate(100 110)" 
         >
           <animate attributeName='d' 
           dur="15s" repeatCount="indefinite" begin="0s" 

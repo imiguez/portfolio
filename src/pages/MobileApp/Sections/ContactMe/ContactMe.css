@@ -1,0 +1,84 @@
+#contact-me {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 45px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-top: 100px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 120%
+}
+
+.container {
+    width: calc(80vw - 40px);
+    padding: 15px 20px;
+    min-height: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background: radial-gradient(circle at 18% -21%, #9612ca, #430f58);
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 0px solid black;
+    border-radius: 10px;
+    
+}
+
+.guy-watching-the-phone-loader {
+    width: 30vw;
+    height: calc(30vw * 1.152073733);
+    margin-top: 10px;
+    transform: scaleX(-1);
+    background-position: center;
+    background-size: cover;
+}
+
+.guy-watching-the-phone {
+    aspect-ratio: 368/434;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    min-width: calc(40% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-list li {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at 18% -21%, #9612ca, #5e5e63);
+    border: 1px solid #5e5e63ce;
+    padding: 4px 5px;
+    border-radius: 4px;
+}
+
+.contact-list li svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+#github {
+    background-color: black;
+    fill: white;
+    padding: 4px 4px 3px 3px;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+}

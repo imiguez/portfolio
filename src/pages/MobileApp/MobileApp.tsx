@@ -6,7 +6,7 @@ import 'pages/MobileApp/Sections/Sections.css';
 import Hero from './Sections/Hero/Hero'
 import Nav from './Nav/Nav';
 
-const ContactMe = lazy(() => (import('./Sections/ContactMe')));
+const ContactMe = lazy(() => (import('./Sections/ContactMe/ContactMe')));
 
     function delayForDemo(promise) {
     return new Promise(resolve => {
@@ -35,9 +35,9 @@ export default function MobileApp() {
         <div className="background"/>
         <Nav></Nav>
         <Hero/>
-        {/* <Suspense fallback={<Loader/>}>
+        <Suspense fallback={<Loader/>}>
             <ContactMe/>
-        </Suspense> */}
+        </Suspense>
     </>
   )
 }
