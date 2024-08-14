@@ -20,19 +20,24 @@ const Loader = () => (
 </div>)
 
 export default function MobileApp() {
-
     useEffect(() => {
-        // gsap.registerPlugin(ScrollTrigger);
-        // gsap.to('.background', {
-        //     scrollTrigger: '.box', // start animation when ".box" enters the viewport
-        //     x: 500
-        // });
+        gsap.registerPlugin(ScrollTrigger);
+        const tl = gsap.timeline();
+        tl.to(".background", {
+            scrollTrigger: {
+                trigger: "#home",
+                start: "top top",
+                end: "bottom top",
+                scrub: 1,
+            },
+            background: 'linear-gradient(160deg, rgba(80,80,80,1), rgba(207, 207, 207, .6)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+            ease: 'none'
+        });
     }, []);
 
   return (
     <>
-    {/* podria ir moviendose el fondo a medida que se escrollea usando GSAP */}
-        <div className="background"/>
+        <div className="background" style={{height: window.outerHeight}}/>
         <Nav></Nav>
         <Hero/>
         <Suspense fallback={<Loader/>}>
