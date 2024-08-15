@@ -1,0 +1,90 @@
+#experience {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 10vh;
+}
+
+.experience-main-container {
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.side-bar {
+    margin: 5% 0;
+    height: auto;
+    width: 2px;
+    background-color: #5e5e63e7;
+    border-radius: 10px;
+}
+
+.experiences-container {
+    display: flex;
+    flex-direction: column;
+    width: calc(95% - 30px);
+}
+
+.experience-container {
+    width: calc(100% - 30px);
+    border: 1px solid #5e5e63;
+    border-radius: 10px;
+    background: linear-gradient(rgb(104, 104, 104), #484848);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: blur(20);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.experience-container:last-of-type {
+    margin-bottom: 0;
+}
+
+.experience-container header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-header-bar {
+    margin: 15px 0 10px 2%;
+    width: 96%;
+    height: 1px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.experience-container header div {
+    width: 75%;
+}
+
+.experience-title {
+    font-size: 18px;
+    margin: 0;
+    width: auto;
+}
+
+.experience-date {
+    font-size: .8em;
+    font-weight: 300;
+    margin: 5px 0 0 0;
+    width: auto;
+}
+
+.company-banner {
+    width: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.experience-description {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 0;
+    text-align: left;
+}

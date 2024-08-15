@@ -28,8 +28,8 @@ export default function Nav() {
         <nav id='nav' >
             <ul className='ul'>
                 <li><a href='#home'><i className="bi bi-house-fill" />Home</a></li>
-                {/* <li><a href='#Experience'><i className="bi bi-hammer"></i>Experience</a></li>
-                <li><a href='#Projects'><i className="bi bi-cone-striped"></i>Projects</a></li>
+                <li><a href='#experience'><i className="bi bi-hammer"></i>Experience</a></li>
+                {/* <li><a href='#Projects'><i className="bi bi-cone-striped"></i>Projects</a></li>
                 <li><a href='#AboutMe'><i className="bi bi-person-fill"></i>About Me</a></li>
                 <li><a href='#Education'><i className="bi bi-briefcase-fill"></i>Education</a></li> */}
                 <li><a href='#contact-me'><i className="bi bi-phone-fill"></i>Contact Me</a></li>
