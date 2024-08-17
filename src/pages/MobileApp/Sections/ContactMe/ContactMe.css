@@ -5,16 +5,6 @@
     align-items: center;
 }
 
-.title {
-    font-size: 45px;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    margin-top: 100px;
-    font-weight: bold;
-    letter-spacing: -1px;
-    line-height: 120%
-}
 
 .container {
     width: calc(80vw - 40px);
@@ -25,7 +15,6 @@
     background: radial-gradient(circle at 18% -21%, #9612ca, #430f58);
     display: flex;
     justify-content: space-around;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 0px solid black;
     border-radius: 10px;
     

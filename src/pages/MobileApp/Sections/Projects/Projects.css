@@ -1,0 +1,86 @@
+#projects {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-container {
+    width: 90%;
+    margin-top: 8vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    grid-auto-flow: dense;
+    align-items: center;
+}
+
+.project-container {
+    border-radius: 10px;
+    justify-self: center;
+    display: flex;
+    position: relative;
+}
+
+.project-type-1 {
+    width: calc(45vw - 10px);
+    aspect-ratio: 1;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.project-type-2 {
+    width: calc(90vw - 5px);
+    aspect-ratio: 2/1;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.project-type-3 {
+    width: calc(45vw - 5px);
+    aspect-ratio: 1/2;
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.ride-image-container {
+    align-items: center;
+    background-color: #ffcf00;
+}
+
+.ride-image {
+    aspect-ratio: 1;
+    width: calc(45vw - 5px);
+}
+
+.paint-image {
+    filter: opacity(.8) saturate(1.2);
+}
+
+.beerbee-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.beerbee-image {
+    aspect-ratio: 1;
+    width: calc(45vw - 5px);
+}

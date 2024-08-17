@@ -17,7 +17,7 @@ export default function ContactMe() {
       <h1 className='title' >Get in touch</h1>
 
 
-      <div className='container'>
+      <div className='container box-shadow'>
         <div className='guy-watching-the-phone-loader' style={{backgroundImage: wasLoaded ? "none" : `url(img/Mobile/guy-watching-the-phone_opt.png)`,}}>
           <img src="img/Mobile/guy-watching-the-phone.png" className="guy-watching-the-phone" style={{opacity: +wasLoaded}} loading='lazy' onLoad={() => setWasLoaded(true)}/>
         </div>
