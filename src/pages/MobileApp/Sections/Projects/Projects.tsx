@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import 'pages/MobileApp/Sections/Projects/Projects.css';
 import ImageLoader from './ImageLoader';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { exp1, exp2, projects, projects2 } from '@/constants/ScrollAnimations';
 
 function Projects() {
+    
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        const tl = gsap.timeline();
+        tl.fromTo("body", exp2, projects);
+        tl.fromTo("body", projects, projects2);
+    }, []);
+
   return (
     <section id='projects'>
         <h2 className='title'>Projects</h2>

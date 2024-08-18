@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import './Hero.css';
+import { home, init } from '@/constants/ScrollAnimations';
 
 type Particles = {
   size: number,
@@ -143,6 +144,7 @@ export default function Hero() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline();
+    tl.fromTo("body", init, home);
 
     for (let i = 0; i < particles.length; i++) {
       tl.to(`.particle-${i}`, {

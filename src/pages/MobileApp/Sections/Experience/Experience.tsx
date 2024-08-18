@@ -1,8 +1,19 @@
 import 'pages/MobileApp/Sections/Experience/Experience.css';
-import React from 'react'
+import React, { useEffect } from 'react'
 import ExperienceArticle from './ExperienceArticle';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { exp2, exp1, home } from '@/constants/ScrollAnimations';
 
 function Experience() {
+    
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        const tl = gsap.timeline();
+        tl.fromTo("body", home, exp1);
+        tl.fromTo("body", exp1, exp2);
+    }, []);
+
   return (
     <section className='section' id='experience'>
         <h2 className='title'>Experience</h2>

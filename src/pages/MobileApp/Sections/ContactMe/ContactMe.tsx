@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import 'pages/MobileApp/Sections/ContactMe/ContactMe.css';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { contactme, projects2 } from '@/constants/ScrollAnimations';
 
 export default function ContactMe() {
   const [wasLoaded, setWasLoaded] = useState(false);
+  
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline();
+    tl.fromTo("body", projects2, contactme);
+
     document.getElementById('linkedin-btn').onclick = () => {
       window.open('https://www.linkedin.com/in/ignacio-miguez/', 'blank');
     }
