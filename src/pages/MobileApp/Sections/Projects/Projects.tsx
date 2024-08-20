@@ -3,7 +3,7 @@ import 'pages/MobileApp/Sections/Projects/Projects.css';
 import ImageLoader from './ImageLoader';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { exp1, exp2, projects, projects2 } from '@/constants/ScrollAnimations';
+import { exp2, projects, projects2 } from '@/constants/ScrollAnimations';
 
 function Projects() {
     
@@ -16,7 +16,7 @@ function Projects() {
 
   return (
     <section id='projects'>
-        <h2 className='title'>Projects</h2>
+        <h2 className='title text-gradient-effect'>Projects</h2>
         <div className='projects-container'>
             <article className='project-container project-type-3 box-shadow' id='project-ride'>
                 <ImageLoader src='img/Projects/ride.png' containerClassName='ride-image-container image-container' imageClassName='ride-image' />

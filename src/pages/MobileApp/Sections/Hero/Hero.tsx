@@ -161,8 +161,8 @@ export default function Hero() {
   return (
     <section id="home" className="section">
       <section className='hero-section'>
-        <h1 className="hero-title">Ignacio Miguez</h1>
-        <h2 className="hero-subtitle">Software Developer</h2>
+        <h1 className="hero-title text-gradient-effect">Ignacio Miguez</h1>
+        <h2 className="hero-subtitle text-gradient-effect">Software Developer</h2>
         <p className="hero-description">
           Versatile <strong>Full Stack developer</strong> with a passion for crafting innovative solutions. Proven ability to quickly <strong>learn</strong> and <strong>adapt</strong> to new technologies
           and challenges.

@@ -33,7 +33,7 @@ function Experience() {
 
   return (
     <section className='section' id='experience'>
-        <h2 className='title'>Experience</h2>
+        <h2 className='title text-gradient-effect'>Experience</h2>
         <article className='experience-main-container'>
             <div className='side-bar'/>
             <div className='experiences-container'>

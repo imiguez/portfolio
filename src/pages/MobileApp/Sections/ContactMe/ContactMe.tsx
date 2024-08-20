@@ -22,7 +22,7 @@ export default function ContactMe() {
 
   return (
     <section id='contact-me' className='section'>
-      <h1 className='title' >Get in touch</h1>
+      <h1 className='title text-gradient-effect' >Get in touch</h1>
 
 
       <div className='container box-shadow'>

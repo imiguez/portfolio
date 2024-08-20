@@ -8,7 +8,8 @@ export const init = {
         scrub: 0.1,
         toggleActions: toggleActions
     },
-    background: 'linear-gradient(-180deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    // background: 'linear-gradient(-180deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    background: 'linear-gradient(-180deg, #20153cdd, #654f9cdd), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
     ease: 'none',
 }
 
@@ -21,7 +22,8 @@ export const home = {
         scrub: 0.1,
         toggleActions: toggleActions
     },
-    background: 'linear-gradient(-135deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    // background: 'linear-gradient(-135deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    background: 'linear-gradient(-135deg, #20153cdd, #654f9cdd), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
     ease: 'none',
 }
 
@@ -36,7 +38,8 @@ export const exp1 = {
 
         toggleActions: toggleActions
     },
-    background: 'linear-gradient(-120deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    // background: 'linear-gradient(-120deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    background: 'linear-gradient(-120deg, #20153cdd, #654f9cdd), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
     ease: 'none',
 };
 
@@ -50,7 +53,8 @@ export const exp2 = {
 
         toggleActions: toggleActions
     },
-    background: 'linear-gradient(-100deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    // background: 'linear-gradient(-100deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    background: 'linear-gradient(-100deg, #20153cdd, #654f9cdd), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
     ease: 'none',
 };
 
@@ -63,7 +67,8 @@ export const projects = {
         // markers: true,
         toggleActions: toggleActions
     },
-    background: 'linear-gradient(-91deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    // background: 'linear-gradient(-91deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    background: 'linear-gradient(-91deg, #20153cdd, #654f9cdd), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
     ease: 'none',
 };
 
@@ -77,7 +82,8 @@ export const projects2 = {
         toggleActions: toggleActions
     },
     lazy: true,
-    background: 'linear-gradient(-89deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    // background: 'linear-gradient(-89deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    background: 'linear-gradient(-89deg, #20153cdd, #654f9cdd), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
     ease: 'none',
 };
 
@@ -93,6 +99,7 @@ export const contactme = {
         toggleActions: toggleActions
     },
     lazy: true,
-    background: 'linear-gradient(-45deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    // background: 'linear-gradient(-45deg, rgba(80,80,80,1), rgba(207, 207, 207, 1)), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
+    background: 'linear-gradient(-45deg, #20153cdd, #654f9cdd), radial-gradient(circle at 18% -21%, rgba(80,80,80,1), rgba(0,0,0,.9))',
     ease: 'none',
 };

@@ -49,3 +49,10 @@
   margin-top: 100px;
   font-weight: bold;
 }
+
+.text-gradient-effect {
+  background: linear-gradient(180deg, white, white, #737376);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
