@@ -1,4 +1,6 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect, useRef } from 'react'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface IExperienceArticle {
     title: string,
@@ -9,9 +11,29 @@ interface IExperienceArticle {
 }
 
 const ExperienceArticle: FC<IExperienceArticle> = ({ title, dateFrom, dateTo, companyImgUrl, description }) => {
+    const r = useRef(null);
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        const tl = gsap.timeline();
+        tl.from(r.current, {
+            scrollTrigger: {
+                trigger: r.current,
+                start: "top 70%",
+                end: "top 70%",
+                scrub: 4,
+                toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 50,
+            ease: 'power2.inOut',
+
+        });
+    }, []);
 
   return (
-    <article className='experience-container box-shadow'>
+    <article ref={r} className={`experience-container box-shadow`} >
+        <div className='experience-point box-shadow'/>
         <header>
             <div>
                 <h3 className='experience-title'>{title}</h3>

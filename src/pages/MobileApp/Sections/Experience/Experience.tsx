@@ -6,12 +6,29 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { exp2, exp1, home } from '@/constants/ScrollAnimations';
 
 function Experience() {
-    
+
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
         const tl = gsap.timeline();
         tl.fromTo("body", home, exp1);
         tl.fromTo("body", exp1, exp2);
+
+        const scroll = {
+            trigger: "#experience",
+            start: "top 60%",
+            end: "bottom bottom",
+            scrub: 1,
+        }
+
+        tl.fromTo(".side-bar", {
+            scrollTrigger: scroll,
+            height: 0,
+            ease: 'power2.in',
+        }, {
+            scrollTrigger: scroll,
+            height: "auto",
+            ease: 'power2.in',
+        });
     }, []);
 
   return (

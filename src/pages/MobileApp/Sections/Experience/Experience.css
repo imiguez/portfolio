@@ -1,5 +1,6 @@
 #experience {
-    height: 100vh;
+    min-height: 100vh;
+    height: min-content;
     display: flex;
     flex-direction: column;
 }
@@ -12,7 +13,7 @@
 }
 
 .side-bar {
-    margin: 5% 0;
+    margin: 15% 0;
     height: auto;
     width: 2px;
     background-color: #5e5e63e7;
@@ -29,13 +30,26 @@
     width: calc(100% - 30px);
     border: 1px solid #5e5e63;
     border-radius: 10px;
-    background: linear-gradient(rgb(104, 104, 104), #484848);
+    /* background: linear-gradient(rgb(104, 104, 104), #484848); */
+    background: radial-gradient(circle at 100% -10%, #9612ca, #430f58);
     filter: blur(20);
     padding: 15px;
     margin-bottom: 15px;
+    position: relative;
 }
+
 .experience-container:last-of-type {
     margin-bottom: 0;
+}
+
+.experience-container .experience-point {
+    position: absolute;
+    left: calc(( ( ( (5vw + 32px) / 3) - 8px) - ( (5vw + 32px) / 3*2) ));
+    bottom: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background: linear-gradient(#9612ca, #430f58);
 }
 
 .experience-container header {
