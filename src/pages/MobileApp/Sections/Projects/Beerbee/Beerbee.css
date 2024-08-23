@@ -1,15 +1,49 @@
 .beerbee-image-container {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     background-repeat: no-repeat;
     background-size: contain;
+    position: absolute;
     background-position: center;
-    border-radius: 10px;
+    z-index: 0;
 }
 
 .beerbee-image {
     height: calc(45vw - 5px);
     width: calc(45vw - 5px);
     transition: .5s ease-in;
+}
+
+#project-beerbee-image-container {
+    width: 100%;
+    height: 30%;
+    position: relative;
+}
+
+.project-beerbee-background-container-image, .project-beerbee-background-image,
+.project-beerbee-title-container-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.project-beerbee-background-image {
+    opacity: .5 !important;
+}
+
+.project-beerbee-title-container-image {
+    display: flex;
+    align-items: center;
+}
+.project-beerbee-title-image {
+    width: 90%;
+    margin: 0 5%;
+    aspect-ratio: 830/200;
+}
+
+#project-beerbee-description-section {
+    width: 100%;
+    height: 70%;
+    background-color: white;
 }

@@ -108,7 +108,7 @@
 .ul li:first-of-type a { padding: 25px 35px 15px 25px }
 .ul li:last-of-type a { padding: 15px 35px 25px 25px}
 
-.bi {
+#nav .bi {
     color: var(--foreground);
     margin-right: 20px;
 }

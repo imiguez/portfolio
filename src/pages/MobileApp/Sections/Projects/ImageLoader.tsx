@@ -13,7 +13,10 @@ const ImageLoader: FC<IImageLoader> = ({ src, containerClassName, imageClassName
   const [path, format] = src.split(".");
 
   return (
-    <div className={containerClassName} style={{backgroundImage: (wasLoaded ? "" : `url(${path+"_opt."+format})`) + (!wasLoaded && backgroundGradient ? ", " : "") + (backgroundGradient ?? "")}} >
+    <div className={containerClassName} style={{
+      backgroundImage: (wasLoaded ? "" : `url(${path+"_opt."+format})`) + (!wasLoaded && backgroundGradient ? ", " : "") + (backgroundGradient ?? ""),
+      backgroundSize: "cover", backgroundRepeat: "no-repeat",
+      }}>
         <img src={path+"."+format} className={imageClassName} style={{opacity: +wasLoaded}} loading='lazy' onLoad={() => setWasLoaded(true)}/>
     </div>
   )

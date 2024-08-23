@@ -1,7 +1,3 @@
-#project-ride {
-    flex-direction: column;
-}
-
 .ride-image-container {
     align-items: center;
     background-color: #ffcf00;
@@ -15,25 +11,16 @@
     width: 100%;
 }
 
-.ride-container {
-    opacity: 0;
-    z-index: 1;
-    position: absolute;
-    transition: opacity .8s ease-in-out .5s;
-}
-
-.project-selected .ride-container {
-    opacity: 1;
-}
-
 .project-images-slider-container {
     width: 100%;
     height: 50%;
     background-color: #ffcf00;
+    display: flex;
+    justify-content: center;
 }
 
 .project-ride-image-slider {
-    width: 100%;
+    aspect-ratio: 416/873;
     padding: 5% 0;
     height: 90%;
     display: flex;
@@ -41,49 +28,13 @@
 }
 
 .ride-image-slider {
+    width: 100%;
     height: 100%;
-    aspect-ratio: 416/873;
     filter: drop-shadow(10px 15px 8px rgba(0, 0, 0, 0.4));
 }
 
 
-.project-ride-description-section {
-    background-color: white;
+#project-ride-description-section {
     height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: scroll;
-    box-shadow: 0px 8px 8px 1px rgba(0, 0, 0, 0.2) inset;
+    background-color: white;
 }
-
-.project-ride-title {
-    font-size: 30px;
-    width: auto;
-}
-
-.project-ride-title, .project-ride-description-section .project-ride-description-title {
-    background: linear-gradient(180deg, #8e8e90, #76767a, black);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.project-ride-description-section .project-ride-description-title {
-    margin: 40px 0 15px 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-.project-ride-description-section .project-ride-description-title:first-of-type {margin-top: 15px;}
-
-
-.project-ride-description-section p {
-    width: 80%;
-    margin: 0;
-    margin-bottom: 15px;
-    color: black;
-    text-align: justify;
-}
-.project-ride-description-section p:last-of-type {padding-bottom: 50px;}
-
-.project-ride-description-section strong {color: black;}
