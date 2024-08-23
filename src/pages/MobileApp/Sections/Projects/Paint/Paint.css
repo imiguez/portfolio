@@ -1,0 +1,6 @@
+.paint-image {
+    aspect-ratio: 1;
+    width: 100%;
+    filter: opacity(.8) saturate(1.2);
+    width: 100%;
+}
